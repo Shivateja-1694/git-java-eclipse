@@ -29,6 +29,9 @@ public class LoginPage {
 	
 	@FindBy(xpath = "//p[text()='Your email or password is incorrect!']")
 	private WebElement loginInLineMsg;
+	
+	@FindBy(xpath  = "//a[text()=' Logout']")
+	private WebElement logoutBtnClick;
 
 	//-------------- CONSTRUCTOR-----------------------
 	
@@ -61,6 +64,10 @@ public class LoginPage {
 	
 	public String getInLineMessageText() {
 		return loginInLineMsg.getText().trim();
+	}
+	
+	public void clickLogoutBtn() {
+		logoutBtnClick.click();
 	}
 	
 

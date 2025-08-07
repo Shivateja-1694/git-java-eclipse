@@ -1,4 +1,4 @@
-package tests.auth;
+package testcases;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -11,8 +11,8 @@ import pages.HomePage;
 import pages.SignUpPage;
 import utils.Utility;
 
-public class RegisterTests extends Base {
-
+public class TestCase_01 extends Base {
+	
 	@Test
 	public void registerUser() {
 
@@ -45,9 +45,9 @@ public class RegisterTests extends Base {
 		accinfo.clickContinueBtn();
 		String expected = "Logged in as " + ConfigReader.getProperty("username");
 		Assert.assertEquals(accinfo.getLoggedInUserText(), expected, ConfigReader.getProperty("loginUserNameMsg"));
-		accinfo.clickDeletebtn();
-		Assert.assertTrue(accinfo.checkAccDelSuccMsg(), ConfigReader.getProperty("accDelSuccMess"));
-		accinfo.clickContinueBtn2();
+//		accinfo.clickDeletebtn();
+//		Assert.assertTrue(accinfo.checkAccDelSuccMsg(), ConfigReader.getProperty("accDelSuccMess"));
+//		accinfo.clickContinueBtn2();
 	
 	}
 

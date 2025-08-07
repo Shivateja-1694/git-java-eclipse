@@ -18,6 +18,8 @@ public class HomePage {
 	private WebElement signUpClick;
 	
 	
+	
+	
 	//--------- CONSTRUCTOR----------------------------
 	
 	public HomePage(WebDriver driver) {
