@@ -20,6 +20,12 @@ public class HomePage {
 	@FindBy(xpath = "//a[text()=' Contact us']")
 	private WebElement clickContactUs;
 	
+	@FindBy(xpath = "(//button[text()='Test Cases'])[last()]")
+	private WebElement clickTestCasesBtn;
+	
+	@FindBy(xpath = "//b[text()='Test Cases']")
+	private WebElement checkTestCaseMsg;
+	
 	
 	
 	//--------- CONSTRUCTOR----------------------------
@@ -45,6 +51,22 @@ public class HomePage {
 	
 	public void clickContactUsBtn() {
 		clickContactUs.click();
+	}
+	
+	public WebElement getClickTestCasesBtn() {
+	    return clickTestCasesBtn;
+	}
+	
+	public void clickTestCasesBtn() {
+		clickTestCasesBtn.click();
+	}
+	
+	public boolean checkTestCaseTitle() {
+		return checkTestCaseMsg.isDisplayed();
+	}
+	
+	public String getTestcasesPageTitle() {
+		return driver.getTitle();
 	}
 	
 

@@ -12,7 +12,7 @@ import pages.HomePage;
 public class TestCase_6 extends Base {
 	
 	@Test
-	public void verifyRegisterUserWithExistingEmail() {
+	public void verifyContactUsForm() {
 		
 		HomePage homepage = new HomePage(driver);
 		
