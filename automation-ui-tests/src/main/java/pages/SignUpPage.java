@@ -26,6 +26,9 @@ public class SignUpPage {
 	@FindBy(xpath = "//button[text()='Signup']")
 	private WebElement clickSignUpBtn;
 	
+	@FindBy(xpath = "//p[text()='Email Address already exist!']")
+	private WebElement checkEmailMsg;
+	
 	//--------- CONSTRUCTOR----------------------------
 	
 	public SignUpPage(WebDriver driver) {
@@ -58,5 +61,9 @@ public class SignUpPage {
 	
 	public void clickSignUpbtn() {
 		clickSignUpBtn.click();
+	}
+	
+	public boolean checkEmailValidationMsg() {
+		 return checkEmailMsg.isDisplayed();
 	}
 }
