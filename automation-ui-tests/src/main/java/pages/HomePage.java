@@ -17,6 +17,8 @@ public class HomePage {
 	@FindBy(xpath = "//a[normalize-space(text())='Signup / Login']")
 	private WebElement signUpClick;
 	
+	@FindBy(xpath = "//a[text()=' Contact us']")
+	private WebElement clickContactUs;
 	
 	
 	
@@ -40,4 +42,10 @@ public class HomePage {
 	public void signUpClick() {
 		signUpClick.click();
 	}
+	
+	public void clickContactUsBtn() {
+		clickContactUs.click();
+	}
+	
+
 }
