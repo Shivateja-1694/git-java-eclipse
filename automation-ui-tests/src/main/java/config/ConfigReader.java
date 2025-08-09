@@ -23,12 +23,15 @@ public class ConfigReader {
 			FileInputStream fis2 = new FileInputStream(System.getProperty("user.dir") + "/src/main/java/config/register.properties");
 			FileInputStream fis3 = new FileInputStream(System.getProperty("user.dir") + "/src/main/java/config/AssertionMessages.properties");
 			FileInputStream fis4 = new FileInputStream(System.getProperty("user.dir") + "/src/main/java/config/contactus.properties");
+			FileInputStream fis5 = new FileInputStream(System.getProperty("user.dir") + "/src/main/java/config/product.properties");
 
 			// Loads the file content into the 'prop' object as key-value pairs
 			prop.load(fis);
 			prop.load(fis2);
 			prop.load(fis3);
 			prop.load(fis4);
+			prop.load(fis5);
+			
 		} catch (IOException e) {
 			// If there is an error (like file not found), it will print the reason
 			System.out.println("❌ Unable to load config file: " + e.getMessage());
