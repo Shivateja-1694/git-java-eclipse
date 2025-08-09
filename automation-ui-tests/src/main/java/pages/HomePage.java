@@ -26,7 +26,17 @@ public class HomePage {
 	@FindBy(xpath = "//b[text()='Test Cases']")
 	private WebElement checkTestCaseMsg;
 	
+	@FindBy(xpath = "//h2[text()='Subscription']")
+	private WebElement checkSubscription;
 	
+	@FindBy(id = "susbscribe_email")
+	private WebElement enterEmail;
+	
+	@FindBy(id = "subscribe")
+	private WebElement clickArrowBtn;
+	
+	@FindBy(xpath = "//div[contains(text(),'You have been successfully subscribed!')]")
+	private WebElement successMessage;
 	
 	//--------- CONSTRUCTOR----------------------------
 	
@@ -69,5 +79,20 @@ public class HomePage {
 		return driver.getTitle();
 	}
 	
+	public boolean isSubscriptionVisible() {
+		return checkSubscription.isDisplayed();
+	}
+	
+	public void enterEmailID(String email) {
+		enterEmail.sendKeys(email);
+	}
+	
+	public void clickArrowBtn() {
+		clickArrowBtn.click();
+	}
+	
+	public WebElement isSuccessMessageVisible() {
+		return successMessage;
+	}
 
 }
