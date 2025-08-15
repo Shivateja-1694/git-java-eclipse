@@ -22,10 +22,10 @@ public class TestCase_8 extends Base {
 		
 		Assert.assertTrue(homepage.isDisplayedHomePage(), ConfigReader.getProperty("homePageMessage"));
 		Assert.assertEquals(homepage.getHomePageTitle(), ConfigReader.getProperty("homePageTitle"), ConfigReader.getProperty("homePageMessage"));
+		homepage.clickProductsBtn();
 		
 		ProductsPage productPage = new ProductsPage(driver);
 		
-		productPage.clickProductsBtn();
 		Assert.assertEquals(productPage.getProductsPageTitle(), ConfigReader.getProperty("productsPageTitle"), ConfigReader.getProperty("productsPageMsg"));
 		Assert.assertTrue(productPage.checkAllProducts(), ConfigReader.getProperty("allProductsMsg"));
 		Assert.assertTrue(productPage.checkProductListPage(), ConfigReader.getProperty("productListMsg"));
